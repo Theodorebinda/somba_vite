@@ -1,20 +1,19 @@
 'use client'
+import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Container } from '@/ui/components/container/container';
-import { Icon, Search } from 'lucide-react';
+import { Typography } from '@/ui/components/typography/typography';
+import { ScrollTagArt } from '@/ui/modules/scrollTagArticle/scrollTagArticle';
+import { Search } from 'lucide-react';
 import React from 'react';
 
 
 const App: React.FC = () => {
   return (
-    <Container className='text-center pt-16'>
-      <Container className='flex'>
-        <Input type='search'  placeholder='search'/>
-        <Button className='-z-3' size={"icon"}><Search/></Button>
-      </Container>
-
-    </Container>
+    <div className='pt-20 '>
+       <Header /> 
+    </div>
   );
 };
 
