@@ -1,5 +1,5 @@
 import { Toaster } from "@/components/ui/toaster"
-// import { MobileNavigation } from "@/routes/mobileNavigation"
+import { MobileNavigation } from "@/routes/mobileNavigation"
 // import { Navigation } from "@/routes/navigation"
 import { Footer } from "@/ui/modules/footer"
 
@@ -11,9 +11,8 @@ export default function MainRoutesLayout({
 }) {
   return (
     <div className=''>
-      <p>Hey</p>
       {/* <Navigation className='hidden md:block'/> */}
-      {/* <MobileNavigation className='md:hidden'/> */}
+      <MobileNavigation className='md:hidden'/>
       {children}
       {/* <Footer/> */}
       <Toaster/>

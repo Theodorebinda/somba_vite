@@ -4,7 +4,7 @@ import React from 'react';
 
 const App: React.FC = () => {
   return (
-    <main>
+    <main className='text-center pt-16'>
       <h1>Hello</h1>
     </main>
   );
