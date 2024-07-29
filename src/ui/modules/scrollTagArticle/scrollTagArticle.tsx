@@ -12,7 +12,7 @@ export function ScrollTagArt() {
         <div className="flex w-1/2 space-x-4 p-4">
           {tag.map((artTag) => (
             <figure key={artTag.name} className="flex flex-col items-center shrink-0">
-              <div className="overflow-hidden rounded-full w-20">
+              <div className="overflow-hidden rounded-full w-14">
             <Avatar>
                 <AvatarImage src={artTag.image} />
                 <AvatarFallback>{artTag.name}</AvatarFallback>
