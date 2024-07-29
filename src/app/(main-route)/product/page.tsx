@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import {ProductCard} from '../../components/ProductCard';
+import {ProductCard} from '../../../components/ProductCard';
 import { getAllProducts } from '@/pages/api/productApi';
 
 interface ProductListProps {
