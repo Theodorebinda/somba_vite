@@ -5,8 +5,9 @@ import { Typography } from "@/ui/components/typography/typography";
 import { Heart } from "lucide-react"; // Import de l'icône de cœur
 import { useState } from "react";
 import { Button } from "./ui/button";
+import { PropsProduct } from "@/types/productProps";
 
-export default function NewArrivages({name, }) {
+export default function NewArrivages({name, id, images, price, className}:PropsProduct ){
   const [isFavorite, setIsFavorite] = useState(false);
 
   const handleFavoriteClick = () => {
@@ -15,8 +16,8 @@ export default function NewArrivages({name, }) {
 
   return (
     <Container className="flex flex-col gap-8 items-start">
-      <Container className="flex flex-col ">
-        <Container className="w-56 relative">
+      <Container className= {`flex flex-col ${className}`} >
+        <Container className="w-44 h-[95vw] relative">
           <AspectRatio ratio={16/9}>
             <Image
               src="https://th.bing.com/th/id/OIP.SUnyG064cG-qz7laXb6vlAAAAA?rs=1&pid=ImgDetMain"
@@ -37,9 +38,9 @@ export default function NewArrivages({name, }) {
             </Button>
             <Container className="flex flex-col gap-1">
             <Typography component="span" variant="title-base">
-              PITTI Block jacket
+              {name}
             </Typography>
-            <Typography component="span">{"$27.4"}</Typography>
+            <Typography component="span">{`$ ${price}`}</Typography>
           </Container>
           </AspectRatio>
 

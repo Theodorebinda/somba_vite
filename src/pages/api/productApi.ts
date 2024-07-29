@@ -11,7 +11,7 @@ export const createProduct = async (data: any) => {
 export const getAllProducts = async () => {
   return ProductApi.get('produits');
 };
-
+console.log({getAllProducts})
 export const getProductById = async (id: number) => {
   return ProductApi.get(`produits/${id}`);
 };
