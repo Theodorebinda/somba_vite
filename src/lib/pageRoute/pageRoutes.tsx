@@ -1,24 +1,24 @@
-import { AppLinks } from "@/types/appLinks"
-import { Presentation, Home, Settings2 } from "lucide-react"
-import Linkedin from '../../../public/icons/linkedin.png'
-import Facebook from '../../../public/icons/facebook.png'
-import Youtube from '../../../public/icons/youtube.png'
-import X from '../../../public/icons/TwitterX.png'
+import { AppLinks } from '@/types/appLinks';
+import { Presentation, Home, Settings2 } from 'lucide-react';
+import Linkedin from '../../../public/icons/linkedin.png';
+import Facebook from '../../../public/icons/facebook.png';
+import Youtube from '../../../public/icons/youtube.png';
+import X from '../../../public/icons/TwitterX.png';
 
 export const MainRoutes: AppLinks[] = [
   {
     title: 'Acceuil',
-    baseUrl: '/'
+    baseUrl: '/',
   },
   {
     title: 'Formations',
-    baseUrl: '/trainings'
+    baseUrl: '/trainings',
   },
   {
     title: 'A propos',
-    baseUrl: '/about'
+    baseUrl: '/about',
   },
-]
+];
 
 export const SocialNetworks: AppLinks[] = [
   {
@@ -40,27 +40,27 @@ export const SocialNetworks: AppLinks[] = [
     title: 'Youtube',
     baseUrl: 'https://www.youtube.com/company',
     CustomIcon: Youtube,
-  }
-]
+  },
+];
 
 export const Company: AppLinks[] = [
   {
-    title: "A propos de nous",
+    title: 'A propos de nous',
     baseUrl: '/aboutUs',
   },
   {
-    title: "Contact",
+    title: 'Contact',
     baseUrl: '/contact',
   },
   {
     title: 'Mentions legales',
-    baseUrl: '/legalNotices'
+    baseUrl: '/legalNotices',
   },
   {
     title: "Termes d'utilisation",
-    baseUrl: '/termsOfUse'
-  }
-] 
+    baseUrl: '/termsOfUse',
+  },
+];
 
 export const AsideRoutes: AppLinks[] = [
   {
@@ -69,21 +69,21 @@ export const AsideRoutes: AppLinks[] = [
       {
         title: 'Tableau de bord',
         baseUrl: '/dashboard',
-        Icon: Presentation
+        Icon: Presentation,
       },
       {
         title: 'Paramètres',
         baseUrl: '/setting',
-        Icon: Settings2
-      }
-    ]
+        Icon: Settings2,
+      },
+    ],
   },
-]
+];
 
 export const HomeRoute: AppLinks[] = [
   {
     title: "Retourner à l'acceuil",
     baseUrl: '/',
-    Icon: Home 
+    Icon: Home,
   },
-]
+];

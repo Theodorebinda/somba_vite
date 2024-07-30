@@ -1,4 +1,3 @@
-
 // interface Props {
 //   className?: string
 // }
@@ -17,7 +16,7 @@
 //   : null
 
 //   return(
-//     <header 
+//     <header
 //       className={
 //         clsx(
 //           "z-40 fixed top-0 left-0 right-0 border-b-[1px] border-slate-50 bg-white",
@@ -31,12 +30,12 @@
 //         </Link>
 //         <nav className="flex items-center gap-4 justify-center">
 //           {
-//             MainRoutes.map(route => 
+//             MainRoutes.map(route =>
 //               <Typography key={route.title} variant="body-base" component="p">
 //                 <ActiveLink href={route.baseUrl!}>
 //                   {route.title}
 //                 </ActiveLink>
-//               </Typography>  
+//               </Typography>
 //             )
 //           }
 //           {

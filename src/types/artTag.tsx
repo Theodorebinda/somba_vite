@@ -1,5 +1,4 @@
 export interface ArtTag {
-    name: string
-    image: string
-  }
- 
+  name: string;
+  image: string;
+}

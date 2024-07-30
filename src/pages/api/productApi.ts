@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const ProductApi = axios.create({
-  baseURL: 'http://localhost:3001/api', 
+  baseURL: 'http://localhost:3001/api',
 });
 
 export const createProduct = async (data: any) => {
@@ -11,12 +11,12 @@ export const createProduct = async (data: any) => {
 export const getAllProducts = async () => {
   return ProductApi.get('produits');
 };
-console.log({getAllProducts})
+console.log({ getAllProducts });
 export const getProductById = async (id: number) => {
   return ProductApi.get(`produits/${id}`);
 };
 
-export const updateProduct= async (id: number, data: any) => {
+export const updateProduct = async (id: number, data: any) => {
   return ProductApi.put(`produits/${id}`, data);
 };
 

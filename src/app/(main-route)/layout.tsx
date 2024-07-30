@@ -1,21 +1,20 @@
-import { Toaster } from "@/components/ui/toaster"
-import { MobileNavigation } from "@/routes/mobileNavigation"
+import { Toaster } from '@/components/ui/toaster';
+import { MobileNavigation } from '@/routes/mobileNavigation';
 // import { Navigation } from "@/routes/navigation"
-import { Footer } from "@/ui/modules/footer"
-
+import { Footer } from '@/ui/modules/footer';
 
 export default function MainRoutesLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <div className=''>
+    <div className="">
       {/* <Navigation className='hidden md:block'/> */}
-      <MobileNavigation className='md:hidden'/>
+      <MobileNavigation className="md:hidden" />
       {children}
       {/* <Footer/> */}
-      <Toaster/>
+      <Toaster />
     </div>
-  )
+  );
 }
