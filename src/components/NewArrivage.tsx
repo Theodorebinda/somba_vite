@@ -6,6 +6,7 @@ import { Heart } from 'lucide-react'; // Import de l'icône de cœur
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { PropsProduct } from '@/types/productProps';
+import Link from 'next/link';
 
 export default function NewArrivages({
   name,
@@ -21,6 +22,7 @@ export default function NewArrivages({
   };
 
   return (
+  <Link href={`/product/${id}`}>
     <Container className="flex flex-col gap-8 items-start">
       <Container className={`flex flex-col ${className}`}>
         <Container className="w-44 h-[95vw] relative">
@@ -52,5 +54,6 @@ export default function NewArrivages({
         </Container>
       </Container>
     </Container>
+    </Link>
   );
 }

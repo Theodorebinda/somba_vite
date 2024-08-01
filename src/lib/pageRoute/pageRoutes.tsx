@@ -11,8 +11,8 @@ export const MainRoutes: AppLinks[] = [
     baseUrl: '/',
   },
   {
-    title: 'Formations',
-    baseUrl: '/trainings',
+    title: 'Arrivages',
+    baseUrl: '/Arrivage',
   },
   {
     title: 'A propos',

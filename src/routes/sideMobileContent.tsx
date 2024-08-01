@@ -1,40 +1,29 @@
 import { MainRoutes } from '@/lib/pageRoute/pageRoutes';
 import { Container } from '@/ui/components/container/container';
 import { Typography } from '@/ui/components/typography/typography';
-import { ActiveLink } from './activeLink';
+import { StoreIcon } from 'lucide-react';
+import AccordonNavigation from '@/components/accordonNavigation';
 
 export function SideMobileContent() {
-  // const session = await getServerSession(authOptions)
-
-  // const user = session ? await prisma?.user.findUnique({
-  //   where: {
-  //     name: session!.user!.name!
-  //   },
-  //   select: {
-  //     firstName: true,
-  //     lastName: true,
-  //     image: true,
-  //   }
-  // }) : null
   return (
-    <nav className="h-full  flex-col justify-between">
-      <Container className="w-full flex flex-col ">
+    <nav className="h-full flex-col justify-between">
+      <Typography variant='title-base' className='flex gap-4 justify-center'>
+        <StoreIcon/> SOMBA VITE
+      </Typography>
+      <Container className="w-full flex flex-col">
         {MainRoutes.map((route) => (
-          <Typography key={route.title!} variant="body-base" component="p">
-            <ActiveLink href={route.baseUrl!}>{route.title}</ActiveLink>
-          </Typography>
+          <Container key={route.title!}>
+            <AccordonNavigation
+              className='body-base'
+              titre={route.title}
+              items={[
+                { content: route.title, route: route.baseUrl! },
+                { content: route.title, route: route.baseUrl! },
+                // Ajoutez d'autres items ici si nécessaire
+              ]}
+            />
+          </Container>
         ))}
-      </Container>
-      <Container className="w-full flex flex-col gap-2 mb-4">
-        {/* {
-          session ?
-            user ?
-              <ProfileButton profileImg={ user.image ? user.image : undefined } name={user!.firstName! + " " + '' + user!.lastName!}/>
-            :
-            <SignInButton/>
-          :
-          <SignInButton/>
-        } */}
       </Container>
     </nav>
   );
