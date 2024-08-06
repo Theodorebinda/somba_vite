@@ -3,6 +3,7 @@ import { StaticImageData } from 'next/image';
 export interface AppLinks {
   title: string;
   baseUrl?: string;
+  items?: { content: string, route: string}[];
   Icon?: React.ElementType;
   CustomIcon?: StaticImageData;
   action?: Function;

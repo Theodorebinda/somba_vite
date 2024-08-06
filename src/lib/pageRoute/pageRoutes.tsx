@@ -7,19 +7,62 @@ import X from '../../../public/icons/TwitterX.png';
 
 export const MainRoutes: AppLinks[] = [
   {
-    title: 'Acceuil',
+    title: 'Qui sommes nous',
     baseUrl: '/',
+    items: [{
+      content: 'A propos de nous',
+      route: '/about',
+    },
+    {
+      content: 'Conditions et politique',
+      route: '/conditions',
+    },
+    {
+      content: 'Aide et FAQ',
+      route: '/aide',
+    },
+    {
+      content: 'Nous Contacter',
+      route: '/contact',
+    },
+  ]
   },
   {
+
     title: 'Arrivages',
     baseUrl: '/Arrivage',
-  },
-  {
-    title: 'A propos',
-    baseUrl: '/about',
-  },
+    items: [{
+      content: 'Homme',
+      route: '/hommes',
+    },
+    {
+      content: 'Femmes',
+      route: '/femmes',
+    },
+    {
+      content: 'Enfants',
+      route: '/enfant',
+    },
+    {
+      content: 'Beaute & hygiene',
+      route: '/beaute',
+    },
+    {
+      content: 'Electroique',
+      route: '/electronique',
+    },
+    {
+      content: 'Autres',
+      route: '/autre',
+    },
+
+ 
+   ]
+  }
 ];
 
+
+// lien Reseau sociaux
 export const SocialNetworks: AppLinks[] = [
   {
     title: 'LinkedIn',

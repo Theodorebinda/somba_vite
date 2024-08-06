@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 
 interface PropsAccordon {
     titre: string;
-    items: { content: string, route: string }[];
+    items?: { content: string, route: string }[];
     className?: string;
 }
 
@@ -14,12 +14,12 @@ export default function AccordonNavigation({ titre, items, className }: PropsAcc
     return (
         <Container>
             <Accordion type="single" collapsible>
-                <AccordionItem value="item-1" className={`${className}`}>
-                    <AccordionTrigger className="flex flex-row justify-between items-center gap-6">
-                        <Typography>{titre}</Typography>
+                <AccordionItem value="item-1" className={className}>
+                    <AccordionTrigger className="flex flex-row justify-between items-center gap-6 sticky top-0 bg-white">
+                        <Typography className=" ">{titre}</Typography>
                         <ChevronDown />
                     </AccordionTrigger>
-                    {items.map((item, index) => (
+                    {items?.map((item, index) => (
                         <AccordionContent key={index} className="accordion-down border-b-2">
                             <ActiveLink href={item.route}>{item.content}</ActiveLink>
                         </AccordionContent>
